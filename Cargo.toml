@@ -1,0 +1,14 @@
+[package]
+name = "fp12"
+version = "0.2.0"
+edition = "2024"
+rust-version = "1.95"
+description = "FP-Native: small floating point formats (FP12 = E5M6) for LLM weights"
+license = "MIT"
+
+[dependencies]
+serde_json = "1"
+
+[[bin]]
+name = "fp-quant"
+path = "src/bin/fp-quant.rs"
