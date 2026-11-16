@@ -1,2 +1,2 @@
 # project-firework
-make small movement of ai factor
+Small, steady steps in AI
