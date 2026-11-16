@@ -1,5 +1,5 @@
 # project-firework
-Tiny tweaks that light up AI
+Tiny tweaks that light up llm
 
 ## Homelab
 
