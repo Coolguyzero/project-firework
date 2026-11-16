@@ -1,2 +1,2 @@
 # project-firework
-Small, steady steps in AI
+Tiny tweaks that light up AI
