@@ -1,2 +1,2 @@
 # project-firework
-make greatest change of ai factor
+make small movement of ai factor
