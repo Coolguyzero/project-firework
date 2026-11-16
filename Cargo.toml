@@ -12,3 +12,7 @@ serde_json = "1"
 [[bin]]
 name = "fp-quant"
 path = "src/bin/fp-quant.rs"
+
+[[bin]]
+name = "fp-hist"
+path = "src/bin/fp-hist.rs"
