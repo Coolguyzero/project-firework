@@ -1,0 +1,204 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1680" height="960" viewBox="0 0 1680 960" font-family="'Pretendard','Malgun Gothic','Noto Sans KR','WenQuanYi Zen Hei',sans-serif" xmlns:c2pa="http://c2pa.org/manifest">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#333"/></marker></defs>
+<rect width="1680" height="960" fill="#fff"/>
+<text x="40" y="44" font-size="24" font-weight="800" fill="#111">Homelab System Diagram</text>
+<text x="1650" y="40" font-size="14" font-weight="700" fill="#111" text-anchor="end">Period 2026.10.11 – ongoing (~5 weeks)</text>
+<text x="1650" y="62" font-size="13" fill="#555" text-anchor="end">Main build 2026.11.01 – 11.16 · Fri–Sun, afternoon–1 AM, 5–6 h/day · solo design &amp; build</text>
+<text x="40" y="68" font-size="13" fill="#555">Local LLM research (FP12) · job monitoring · remote access — 2 PCs + Raspberry Pi + 2 devices at home</text>
+<rect x="500" y="90" width="880" height="830" fill="none" stroke="#232f3e" stroke-width="1.6"/>
+<rect x="500" y="90" width="30" height="30" fill="#232f3e"/><text x="515" y="110" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">LAN</text>
+<text x="540" y="110" font-size="15" font-weight="700" fill="#232f3e">Home network (LAN)</text>
+<text x="540" y="128" font-size="11.5" fill="#555">172.30.1.0/24</text>
+<rect x="520" y="140" width="830" height="440" fill="none" stroke="#2b6cb0" stroke-width="1.6" stroke-dasharray="7 5"/>
+<text x="530" y="160" font-size="15" font-weight="700" fill="#2b6cb0">Main ↔ Sub direct link</text>
+<text x="530" y="178" font-size="11.5" fill="#555">10.10.10.0/24 · ssh sub · VPN range too</text>
+<rect x="540" y="215" width="360" height="350" fill="#f1f8f1" stroke="#2e7d32" stroke-width="1.6"/>
+<rect x="540" y="215" width="30" height="30" fill="#2e7d32"/><text x="555" y="235" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">SUB</text>
+<text x="580" y="235" font-size="15" font-weight="700" fill="#2e7d32">Sub PC — main server</text>
+<text x="580" y="253" font-size="11.5" fill="#555">Ubuntu 26.10 · Athlon X4 845 · 16GB · RTX 3060 12GB</text>
+<rect x="552" y="272" width="160" height="58" rx="7" fill="#fff" stroke="#2e7d32" stroke-width="1.5"/>
+<rect x="560" y="283" width="36" height="36" rx="6" fill="#2e7d32"/>
+<text x="578" y="306" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">WG</text>
+<text x="604" y="298" font-size="13" font-weight="700" fill="#222">WireGuard server</text>
+<text x="604" y="316" font-size="11" fill="#555">UDP 51820 · VPN</text>
+<rect x="727" y="272" width="160" height="58" rx="7" fill="#fff" stroke="#2e7d32" stroke-width="1.5"/>
+<rect x="735" y="283" width="36" height="36" rx="6" fill="#2e7d32"/>
+<text x="753" y="306" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">DNS</text>
+<text x="779" y="298" font-size="13" font-weight="700" fill="#222">DuckDNS updater</text>
+<text x="779" y="316" font-size="11" fill="#555">IP → fixed name</text>
+<rect x="552" y="340" width="160" height="58" rx="7" fill="#fff" stroke="#2e7d32" stroke-width="1.5"/>
+<rect x="560" y="351" width="36" height="36" rx="6" fill="#2e7d32"/>
+<text x="578" y="374" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">LLM</text>
+<text x="604" y="366" font-size="13" font-weight="700" fill="#222">Jan API :1337</text>
+<text x="604" y="384" font-size="11" fill="#555">Qwen 9B (llama.cpp)</text>
+<rect x="727" y="340" width="160" height="58" rx="7" fill="#fff" stroke="#2e7d32" stroke-width="1.5"/>
+<rect x="735" y="351" width="36" height="36" rx="6" fill="#2e7d32"/>
+<text x="753" y="374" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">FP</text>
+<text x="779" y="366" font-size="13" font-weight="700" fill="#222">FP12 tests (Rust)</text>
+<text x="779" y="384" font-size="11" fill="#555">fp-quant · fp-hist</text>
+<rect x="552" y="408" width="160" height="58" rx="7" fill="#fff" stroke="#2e7d32" stroke-width="1.5"/>
+<rect x="560" y="419" width="36" height="36" rx="6" fill="#2e7d32"/>
+<text x="578" y="442" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">PUB</text>
+<text x="604" y="434" font-size="13" font-weight="700" fill="#222">clock-pub :8090</text>
+<text x="604" y="452" font-size="11" fill="#555">status web server</text>
+<rect x="727" y="408" width="160" height="58" rx="7" fill="#fff" stroke="#2e7d32" stroke-width="1.5" stroke-dasharray="6 4"/>
+<rect x="735" y="419" width="36" height="36" rx="6" fill="#2e7d32"/>
+<text x="753" y="442" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">WOL</text>
+<text x="779" y="434" font-size="13" font-weight="700" fill="#222">WOL sender</text>
+<text x="779" y="452" font-size="11" fill="#555">wake main PC</text>
+<text x="881" y="421" font-size="9.5" fill="#c0392b" text-anchor="end" font-weight="700">planned</text>
+<rect x="552" y="476" width="160" height="58" rx="7" fill="#fff" stroke="#2e7d32" stroke-width="1.5"/>
+<rect x="560" y="487" width="36" height="36" rx="6" fill="#2e7d32"/>
+<text x="578" y="510" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">RPT</text>
+<text x="604" y="502" font-size="13" font-weight="700" fill="#222">cardput</text>
+<text x="604" y="520" font-size="11" fill="#555">send agent reports</text>
+<rect x="727" y="476" width="160" height="58" rx="7" fill="#fff" stroke="#2e7d32" stroke-width="1.5"/>
+<rect x="735" y="487" width="36" height="36" rx="6" fill="#2e7d32"/>
+<text x="753" y="510" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">JW</text>
+<text x="779" y="502" font-size="13" font-weight="700" fill="#222">jobwatch</text>
+<text x="779" y="520" font-size="11" fill="#555">log watcher · Rust</text>
+<rect x="960" y="215" width="360" height="350" fill="#fdf4ec" stroke="#d35400" stroke-width="1.6"/>
+<rect x="960" y="215" width="30" height="30" fill="#d35400"/><text x="975" y="235" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">MAIN</text>
+<text x="1000" y="235" font-size="15" font-weight="700" fill="#d35400">Main PC — workstation</text>
+<text x="1000" y="253" font-size="11.5" fill="#555">Win 11 Pro · i7-5775C · 32GB · RTX 4080 SUPER</text>
+<rect x="972" y="272" width="160" height="58" rx="7" fill="#fff" stroke="#d35400" stroke-width="1.5"/>
+<rect x="980" y="283" width="36" height="36" rx="6" fill="#d35400"/>
+<text x="998" y="306" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">RDP</text>
+<text x="1024" y="298" font-size="13" font-weight="700" fill="#222">Remote desktop</text>
+<text x="1024" y="316" font-size="11" fill="#555">RDP · VPN range only</text>
+<rect x="1147" y="272" width="160" height="58" rx="7" fill="#fff" stroke="#d35400" stroke-width="1.5"/>
+<rect x="1155" y="283" width="36" height="36" rx="6" fill="#d35400"/>
+<text x="1173" y="306" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">GIT</text>
+<text x="1199" y="298" font-size="13" font-weight="700" fill="#222">FP12 code repo</text>
+<text x="1199" y="316" font-size="11" fill="#555">project-firework</text>
+<rect x="972" y="340" width="160" height="58" rx="7" fill="#fff" stroke="#d35400" stroke-width="1.5"/>
+<rect x="980" y="351" width="36" height="36" rx="6" fill="#d35400"/>
+<text x="998" y="374" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">SSH</text>
+<text x="1024" y="366" font-size="13" font-weight="700" fill="#222">ssh client</text>
+<text x="1024" y="384" font-size="11" fill="#555">ssh sub</text>
+<rect x="1147" y="340" width="160" height="58" rx="7" fill="#fff" stroke="#d35400" stroke-width="1.5"/>
+<rect x="1155" y="351" width="36" height="36" rx="6" fill="#d35400"/>
+<text x="1173" y="374" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">TMP</text>
+<text x="1199" y="366" font-size="13" font-weight="700" fill="#222">LHM :8085</text>
+<text x="1199" y="384" font-size="11" fill="#555">CPU/GPU temp web</text>
+<rect x="972" y="408" width="160" height="58" rx="7" fill="#fff" stroke="#d35400" stroke-width="1.5" stroke-dasharray="6 4"/>
+<rect x="980" y="419" width="36" height="36" rx="6" fill="#d35400"/>
+<text x="998" y="442" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">PWR</text>
+<text x="1024" y="434" font-size="13" font-weight="700" fill="#222">Power on</text>
+<text x="1024" y="452" font-size="11" fill="#555">Wake-on-LAN</text>
+<text x="1126" y="421" font-size="9.5" fill="#c0392b" text-anchor="end" font-weight="700">planned</text>
+<rect x="1147" y="408" width="160" height="58" rx="7" fill="#fff" stroke="#d35400" stroke-width="1.5" stroke-dasharray="6 4"/>
+<rect x="1155" y="419" width="36" height="36" rx="6" fill="#d35400"/>
+<text x="1173" y="442" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">GPU</text>
+<text x="1199" y="434" font-size="13" font-weight="700" fill="#222">LLM brain (next)</text>
+<text x="1199" y="452" font-size="11" fill="#555">RTX 4080S</text>
+<text x="1301" y="421" font-size="9.5" fill="#c0392b" text-anchor="end" font-weight="700">planned</text>
+<rect x="972" y="476" width="160" height="58" rx="7" fill="#fff" stroke="#d35400" stroke-width="1.5"/>
+<rect x="980" y="487" width="36" height="36" rx="6" fill="#d35400"/>
+<text x="998" y="510" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">FEED</text>
+<text x="1024" y="502" font-size="13" font-weight="700" fill="#222">claude-feed</text>
+<text x="1024" y="520" font-size="11" fill="#555">job status feed</text>
+<text x="1151" y="492" font-size="11" fill="#7a3b0b">※ Smart App Control ON</text>
+<text x="1151" y="509" font-size="11" fill="#7a3b0b">blocks self-built exe</text>
+<text x="1151" y="526" font-size="11" fill="#7a3b0b">→ build &amp; run on sub PC</text>
+<rect x="540" y="640" width="250" height="250" fill="#f6f2fd" stroke="#6b46c1" stroke-width="1.6" stroke-dasharray="7 5"/>
+<rect x="540" y="640" width="30" height="30" fill="#6b46c1"/><text x="555" y="660" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">PI</text>
+<text x="580" y="660" font-size="15" font-weight="700" fill="#6b46c1">Raspberry Pi 5</text>
+<text x="580" y="678" font-size="11.5" fill="#555">NVMe · Wi-Fi · coord + memory</text>
+<rect x="555" y="705" width="220" height="58" rx="7" fill="#fff" stroke="#6b46c1" stroke-width="1.5" stroke-dasharray="6 4"/>
+<rect x="563" y="716" width="36" height="36" rx="6" fill="#6b46c1"/>
+<text x="581" y="739" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">MEM</text>
+<text x="607" y="731" font-size="13" font-weight="700" fill="#222">cognee memory</text>
+<text x="607" y="749" font-size="11" fill="#555">project memory store</text>
+<text x="769" y="718" font-size="9.5" fill="#c0392b" text-anchor="end" font-weight="700">planned</text>
+<rect x="555" y="775" width="220" height="58" rx="7" fill="#fff" stroke="#6b46c1" stroke-width="1.5" stroke-dasharray="6 4"/>
+<rect x="563" y="786" width="36" height="36" rx="6" fill="#6b46c1"/>
+<text x="581" y="809" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">EMB</text>
+<text x="607" y="801" font-size="13" font-weight="700" fill="#222">EmbeddingGemma</text>
+<text x="607" y="819" font-size="11" fill="#555">embeddings (search)</text>
+<text x="769" y="788" font-size="9.5" fill="#c0392b" text-anchor="end" font-weight="700">planned</text>
+<rect x="820" y="640" width="250" height="250" fill="#fdf8ee" stroke="#b7791f" stroke-width="1.6"/>
+<rect x="820" y="640" width="30" height="30" fill="#b7791f"/><text x="835" y="660" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">CP</text>
+<text x="860" y="660" font-size="15" font-weight="700" fill="#b7791f">Cardputer</text>
+<text x="860" y="678" font-size="11.5" fill="#555">pocket status viewer</text>
+<rect x="835" y="705" width="220" height="58" rx="7" fill="#fff" stroke="#b7791f" stroke-width="1.5"/>
+<rect x="843" y="716" width="36" height="36" rx="6" fill="#b7791f"/>
+<text x="861" y="739" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">UI</text>
+<text x="887" y="731" font-size="13" font-weight="700" fill="#222">PocketWUI :8088</text>
+<text x="887" y="749" font-size="11" fill="#555">browser web UI</text>
+<rect x="835" y="775" width="220" height="58" rx="7" fill="#fff" stroke="#b7791f" stroke-width="1.5"/>
+<rect x="843" y="786" width="36" height="36" rx="6" fill="#b7791f"/>
+<text x="861" y="809" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">USB</text>
+<text x="887" y="801" font-size="13" font-weight="700" fill="#222">agent reports</text>
+<text x="887" y="819" font-size="11" fill="#555">USB tunnel to sub</text>
+<rect x="1100" y="640" width="250" height="250" fill="#eef8f9" stroke="#00838f" stroke-width="1.6"/>
+<rect x="1100" y="640" width="30" height="30" fill="#00838f"/><text x="1115" y="660" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">CLK</text>
+<text x="1140" y="660" font-size="15" font-weight="700" fill="#00838f">Matrix clock</text>
+<text x="1140" y="678" font-size="11.5" fill="#555">Arduino UNO</text>
+<rect x="1115" y="705" width="220" height="58" rx="7" fill="#fff" stroke="#00838f" stroke-width="1.5"/>
+<rect x="1123" y="716" width="36" height="36" rx="6" fill="#00838f"/>
+<text x="1141" y="739" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">BAR</text>
+<text x="1167" y="731" font-size="13" font-weight="700" fill="#222">Progress bar</text>
+<text x="1167" y="749" font-size="11" fill="#555">jobs over 2 min only</text>
+<rect x="1115" y="775" width="220" height="58" rx="7" fill="#fff" stroke="#00838f" stroke-width="1.5"/>
+<rect x="1123" y="786" width="36" height="36" rx="6" fill="#00838f"/>
+<text x="1141" y="809" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">!</text>
+<text x="1167" y="801" font-size="13" font-weight="700" fill="#222">FAULT / FAIL</text>
+<text x="1167" y="819" font-size="11" fill="#555">overheat · job failed</text>
+<rect x="53" y="373" width="54" height="54" rx="9" fill="#555"/>
+<text x="80" y="406" font-size="15" font-weight="700" fill="#fff" text-anchor="middle">Me</text>
+<text x="80" y="446" font-size="13" font-weight="700" fill="#222" text-anchor="middle">User</text>
+<text x="80" y="462" font-size="11" fill="#555" text-anchor="middle">work laptop</text>
+<rect x="173" y="373" width="54" height="54" rx="9" fill="#2b6cb0" stroke-dasharray="6 4"/>
+<rect x="173" y="373" width="54" height="54" rx="9" fill="none" stroke="#c0392b" stroke-width="2" stroke-dasharray="5 4"/>
+<text x="200" y="406" font-size="15" font-weight="700" fill="#fff" text-anchor="middle">WG</text>
+<text x="200" y="446" font-size="13" font-weight="700" fill="#222" text-anchor="middle">WireGuard</text>
+<text x="200" y="462" font-size="11" fill="#555" text-anchor="middle">laptop client</text>
+<text x="200" y="366" font-size="10" fill="#c0392b" text-anchor="middle" font-weight="700">planned</text>
+<rect x="283" y="373" width="54" height="54" rx="9" fill="#0d7a5f"/>
+<text x="310" y="406" font-size="15" font-weight="700" fill="#fff" text-anchor="middle">DNS</text>
+<text x="310" y="446" font-size="13" font-weight="700" fill="#222" text-anchor="middle">DuckDNS</text>
+<text x="310" y="462" font-size="11" fill="#555" text-anchor="middle">finds home</text>
+<rect x="393" y="373" width="54" height="54" rx="9" fill="#232f3e" stroke-dasharray="6 4"/>
+<rect x="393" y="373" width="54" height="54" rx="9" fill="none" stroke="#c0392b" stroke-width="2" stroke-dasharray="5 4"/>
+<text x="420" y="406" font-size="15" font-weight="700" fill="#fff" text-anchor="middle">RT</text>
+<text x="420" y="446" font-size="13" font-weight="700" fill="#222" text-anchor="middle">Router</text>
+<text x="420" y="462" font-size="11" fill="#555" text-anchor="middle">UDP 51820 forward</text>
+<text x="420" y="366" font-size="10" fill="#c0392b" text-anchor="middle" font-weight="700">planned</text>
+<polyline points="110,400 170,400" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#ah)"/>
+<polyline points="230,400 280,400" fill="none" stroke="#333" stroke-width="1.6" stroke-dasharray="6 4" marker-end="url(#ah)"/>
+<polyline points="340,400 390,400" fill="none" stroke="#333" stroke-width="1.6" stroke-dasharray="6 4" marker-end="url(#ah)"/>
+<polyline points="450,400 475,400 475,301 550,301" fill="none" stroke="#333" stroke-width="1.6" stroke-dasharray="6 4" marker-end="url(#ah)"/>
+<text x="512" y="293" font-size="11" fill="#333" text-anchor="middle" font-weight="600">VPN</text>
+<rect x="1453" y="274" width="54" height="54" rx="9" fill="#24292f"/>
+<text x="1480" y="307" font-size="15" font-weight="700" fill="#fff" text-anchor="middle">GH</text>
+<text x="1480" y="347" font-size="13" font-weight="700" fill="#222" text-anchor="middle">GitHub</text>
+<text x="1480" y="363" font-size="11" fill="#555" text-anchor="middle">public project-firework</text>
+<polyline points="1307,301 1450,301" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#ah)"/>
+<text x="1395" y="293" font-size="11" fill="#333" text-anchor="middle" font-weight="600">push</text>
+<polyline points="575,272 575,205 930,205 930,301 970,301" fill="none" stroke="#333" stroke-width="1.6" stroke-dasharray="6 4" marker-end="url(#ah)"/>
+<text x="775" y="199" font-size="11" fill="#333" text-anchor="middle" font-weight="600">RDP over VPN (planned)</text>
+<polyline points="887,437 970,437" fill="none" stroke="#333" stroke-width="1.6" stroke-dasharray="6 4" marker-end="url(#ah)"/>
+<text x="930" y="430" font-size="11" fill="#333" text-anchor="middle" font-weight="600">wake</text>
+<polyline points="972,505 889,505" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#ah)"/>
+<text x="930" y="498" font-size="11" fill="#333" text-anchor="middle" font-weight="600">job status</text>
+<polyline points="690,534 690,600 860,600 860,640" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#ah)"/>
+<text x="775" y="594" font-size="11" fill="#333" text-anchor="middle" font-weight="600">reports</text>
+<polyline points="875,534 875,618 1180,618 1180,640" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#ah)"/>
+<text x="1030" y="612" font-size="11" fill="#333" text-anchor="middle" font-weight="600">/progress · /fault</text>
+<polyline points="1307,369 1335,369 1335,640" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#ah)"/>
+<text x="1328" y="632" font-size="11" fill="#333" text-anchor="end" font-weight="600">:8085 temps</text>
+<polyline points="600,565 600,640" fill="none" stroke="#333" stroke-width="1.6" stroke-dasharray="6 4" marker-end="url(#ah)"/>
+<text x="608" y="625" font-size="11" fill="#333" text-anchor="start" font-weight="600">memory lookup</text>
+<rect x="40" y="640" width="430" height="250" fill="#fafafa" stroke="#bbb"/>
+<text x="56" y="668" font-size="15" font-weight="700" fill="#111">Legend · design rule</text>
+<line x1="56" y1="694" x2="110" y2="694" stroke="#333" stroke-width="1.6"/><text x="120" y="698" font-size="12.5">solid = done, running now</text>
+<line x1="56" y1="720" x2="110" y2="720" stroke="#333" stroke-width="1.6" stroke-dasharray="6 4"/><text x="120" y="724" font-size="12.5">dashed + <tspan fill="#c0392b" font-weight="700">planned</tspan> = in progress</text>
+<rect x="56" y="742" width="398" height="132" rx="8" fill="#fff8e1" stroke="#f0b429"/>
+<text x="70" y="768" font-size="13" font-weight="700" fill="#333">Status is observed by the system, not reported by agents.</text>
+<text x="70" y="792" font-size="12" font-weight="400" fill="#333">· Job progress/failure: jobwatch reads the logs</text>
+<text x="70" y="816" font-size="12" font-weight="400" fill="#333">· Overheat: the clock reads main PC temps itself</text>
+<text x="70" y="840" font-size="12" font-weight="400" fill="#333">· Making agents report adds work and slows them down</text>
+<text x="70" y="864" font-size="12" font-weight="400" fill="#333">· Mostly built in Rust, self-hosted, no paid services</text>
+<text x="1650" y="936" font-size="11" fill="#888" text-anchor="end">As of 2026-11</text>
+<metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTpmZDFlZGI4MC01NjVlLTQ1Y2QtYmY5OC00MWMyYzFhZjc1OGEAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaCHvqO34FB7ND1QVCqSipiEAAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDo5ZmE0NjA2YS01YWNlLTQ2Y2ItYTM0Ny02OTk0YWI2YzVjYjVscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNogQK+HzQ9Z7IOTwhVXhGdpAAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFgg3AbdIuXw4CClfCHTb15kncXcZpoudXfH8HdLnRA4N2SkZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaHw4fFZLTlwxlC6nblElpv4AAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRMAAAAAAAAAAAAAAAAZGhhc2hYIIYlfaJ+lEgNPASJ3SOEpWbtANIYG6E6XTWP5o021UfhZG5hbWVuanVtYmYgbWFuaWZlc3RqZXhjbHVzaW9uc4GiZXN0YXJ0GU/8Zmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOmZkMWVkYjgwLTU2NWUtNDVjZC1iZjk4LTQxYzJjMWFmNzU4YS9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOmFlZWI4YzM4LTM3MWQtNGM2Mi1hMTg3LWUzNTdmZjkxYjEyN3JjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCDcBt0i5fDgIKV8IdNvXmSdxdxmmi51d8fwd0udEDg3ZKJjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFggj3CTreEGNmCh9zn8Lo9z3LurC3bylP0Bk6m5Gjtq5qWiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFgg2iQohVEkba2Zql6pjrrrRy89nWw2EZ3P17qITsTs1lB0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQFEhKeKXVIoa1byJ5Vx4tjSFSGde6bs+5rHux3bo1X7hCgbJqroQTs159+OBiY+zg4ieyW1Cf6x+KFLszTaUeK8=</c2pa:manifest></metadata></svg>
